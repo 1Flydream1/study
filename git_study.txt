@@ -1,1 +1,40 @@
-git 现在我们启动时光穿梭机
+git学习记录
+
+
+安装:sudo apt-get install git
+
+
+创建版本库：
+第一步：
+	mkdir filename
+	cd filename
+	pwd(命令用于显示当前目录)
+第二步
+	git init（把该目录变成Git可以管理的仓库）
+
+
+添加文件到版本库：
+	git add（把文件添加到仓库）
+	git commit（文件提交到仓库）
+注：git commit -m "explain" 后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，方便从历史记录里找到改动记录
+
+
+版本回退：
+	git log（显示从最近到最远的提交日志）
+	git log -pretty=oneline(简化日志显示)
+	git reset --HEAD^(上一个版本是HEAD^，上上一个版本就是HEAD^^，往上100个版本写成HEAD~100)
+	git reflog(记录你的每一次命令)
+	git diff HEAD -- filename(命令可以查看工作区和版本库里面最新版本的区别)
+
+
+撤销修改：
+	git checkout -- file（可以丢弃工作区的修改）
+	git reset HEAD <file>（可以把暂存区的修改撤销掉（unstage），重新放回工作区）
+注：git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”
+
+
+删除文件：
+	git rm filename(从版本库中删除文件)并git commit
+注：命令git rm用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失最近一次提交后你修改的内容
+
+
