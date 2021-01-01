@@ -4,6 +4,7 @@ git学习记录
 安装:sudo apt-get install git
 
 
+
 创建版本库：
 第一步：
 	mkdir filename
