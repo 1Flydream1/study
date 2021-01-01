@@ -4,7 +4,6 @@ git学习记录
 安装:sudo apt-get install git
 
 
-
 创建版本库：
 第一步：
 	mkdir filename
@@ -42,6 +41,17 @@ git学习记录
 添加远程库：
 	git remote add origin git@github.com:1Flydream1/study.git
 	git push -u origin master(git push命令，实际上是把当前分支master推送到远程)
+	
+删除已关联的名为origin的远程库:
+	git remote rm origin
+
+关联远程库：
+git remote add gitee git@gitee.com:volador1/study.git
+git remote add github git@github.com:1Flydream1/study.git
+
+提交到远程：
+git push github master
+git push gitee master
 
 
 克隆远程仓库
